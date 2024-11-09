@@ -20,7 +20,7 @@ const Header = ({ scrollToSection, refs }) => {
                 <nav className="w-full md:w-[1280px] text-white mx-auto uppercase">
                     <div className="container mx-auto flex justify-between items-center p-4">
                         <div className="navbar-translate flex justify-between w-full">
-                            <a className="text-2xl font-bold" href="#" rel="tooltip">Mayank's Portfolio</a>
+                            <a className="text-2xl font-bold" href="#" rel="tooltip">Himadri's Portfolio</a>
                             <button className="navbar-toggler md:hidden focus:outline-none" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="block w-6 h-1 bg-white mb-1"></span>
                                 <span className="block w-6 h-1 bg-white mb-1"></span>
