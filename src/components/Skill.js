@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Skill = () => {
-  const [skills, setSkills] = useState([
+  const [skills] = useState([
     { skill: 'HTML', progress: 95 },
     { skill: 'CSS', progress: 90 },
     { skill: 'Bootstrap', progress: 85 },

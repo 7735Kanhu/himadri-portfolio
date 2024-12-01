@@ -19,8 +19,8 @@ const ProfilePage = ({ cvUrl }) => {
                     <div className="mx-full h-full flex items-center justify-center bg-[rgba(0,0,0,0.5)]">
                         <div className="content-center flex flex-col items-center justify-center text-center h-full">
                             <div className=" mb-4 relative ">
-                                <a href="#">
-                                    <img src={`${profile}`} alt="Mayank Sharma" className="rounded-full w-32 h-32 md:w-40 md:h-40 ring-4" />
+                                <a href="/">
+                                    <img src={`${profile}`} alt="Kanhu Charan" className="rounded-full w-32 h-32 md:w-40 md:h-40 ring-4" />
                                 </a>
                             </div>
                             <h1 className="text-4xl font-bold text-[#fff]">Kanhu Charan</h1>
