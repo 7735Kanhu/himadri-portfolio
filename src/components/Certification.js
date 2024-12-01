@@ -3,60 +3,43 @@ import React from 'react';
 const Certification = () => {
   const certifications = [
     {
-      title: 'Google Cloud Certified: Terraform Associate (202)',
-      date: '2023-10-11',
-      link: 'https://www.google.com',
+      title: 'Full Stack Web Development - Skyy Skill Academy, Bhubaneswar',
+      date: '2023-09-15',
+      link: 'https://skyyacademy.com/fullstack',
     },
     {
-      title: 'Google Cloud Certified: Digital Leader',
-      date: '2023-09-20',
-      link: 'https://www.google.com',
+      title: 'Front End Development – HTML by Great Learning Academy',
+      date: '2023-08-20',
+      link: 'https://greatlearning.com/html-certification',
     },
     {
-      title: 'Google Cloud Certified: Terraform Associate (202)',
-      date: '2023-10-11',
-      link: 'https://www.google.com',
+      title: 'Python for Machine Learning by Great Learning Academy',
+      date: '2023-07-10',
+      link: 'https://greatlearning.com/python-ml',
     },
-    {
-      title: 'Google Cloud Certified: Digital Leader',
-      date: '2023-09-20',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Google Cloud Certified: Terraform Associate (202)',
-      date: '2023-10-11',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Google Cloud Certified: Digital Leader',
-      date: '2023-09-20',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Google Cloud Certified: Terraform Associate (202)',
-      date: '2023-10-11',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Google Cloud Certified: Digital Leader',
-      date: '2023-09-20',
-      link: 'https://www.google.com',
-    },
-    // Add more certifications here...
   ];
 
   return (
-    <div className="bg-white p-8 rounded-lg w-full md:w-[1280px] mx-auto">
-      <h2 className="text-2xl font-bold mb-4 text-center my-4">Certifications</h2>
+    <div className="bg-white p-8 rounded-lg w-full md:w-[800px] mx-auto shadow-xl">
+      <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">Certifications</h2>
 
-      <ul className="list-none my-10">
+      <ul className="list-none space-y-6">
         {certifications.map((cert, index) => (
-          <li key={index} className="flex items-center mb-4">
-            <div className="w-8 h-8 rounded-full bg-red-500 mr-4"></div>
-            <div className='bg-gray-200 w-full p-4'>
-              <h3 className="text-lg font-bold">{cert.title}</h3>
-              <p className="text-gray-800">{cert.date}</p>
-              <a href={cert.link} className="text-blue-500 hover:underline">View Certificate</a>
+          <li key={index} className="flex items-start">
+            <div className="flex-shrink-0 w-10 h-10 bg-cyan-500 text-white flex items-center justify-center rounded-full mr-4">
+              {index + 1}
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg shadow-sm w-full">
+              <h3 className="text-lg font-semibold text-cyan-800">{cert.title}</h3>
+              <p className="text-sm text-gray-700">Date: {cert.date}</p>
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline text-sm mt-2 block"
+              >
+                View Certificate
+              </a>
             </div>
           </li>
         ))}

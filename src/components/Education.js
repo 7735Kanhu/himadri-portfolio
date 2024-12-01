@@ -6,69 +6,71 @@ const Education = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShowEducation(true);
-    }, 500); // Adjust the delay as needed
+    }, 500); // Adds a delay before showing the education details
 
     return () => clearTimeout(timeoutId);
   }, []);
 
   const education = [
     {
-      title: 'Bachelor of Technology (Computer Science & Engineering)',
-      class:"Bachelor' Degree",
-      institute: 'SETH JAI PARKASH MUKAND LAL INSTITUTE OF ENGINEERING AND TECHNOLOGY',
-      duration: '2018-2021',
-      points: [
-        'Affiliated with Kurukshetra University, Kurukshetra',
-        'Completed B.Tech in Computer Science Engineering with 78%',
-        'Maintained approx. 70% in every semester of college academic',
-      ],
+      title: 'Full Stack Web Development',
+      class: 'Certification',
+      institute: 'Skyy Skill Academy, Bhubaneswar',
+      duration: '02/2023',
+      points: [],
     },
     {
-      title: 'Diploma',
-      institute: 'GOVERNMENT INSTITUTE',
-      class:"Diploma",
-      duration: '2015-2018',
-      points: [
-        'Affiliated with Haryana Technical Education Board (HTER), Haryana',
-        'The college was mainly focused on the basics of 10+2 and the engineering subjects',
-        'There was also a good base in Mathematics and Data Structures',
-        'Completed my Diploma with 70%',
-      ],
+      title: 'Master of Computer Science',
+      class: "Master's Degree",
+      institute: 'Prananath Autonomous College, Utkal University',
+      duration: '08/2019',
+      points: [],
     },
     {
-      title: 'Secondary School',
-      class:"Secondary School",
-      institute: 'MODERN SCHOOL, FARIDABAD',
-      duration: '2013-2014',
-      points: [
-        'Affiliated with Central Board of Secondary Education (CBSE), New Delhi',
-        'The Secondary aims of Maths, English, Science, Social Science, Literature and Languages',
-        'Completed my matriculation with 7.8 CGPA',
-      ],
+      title: 'Bachelor of Science in Biology',
+      class: "Bachelor's Degree",
+      institute: 'Utkal University',
+      duration: '05/2016',
+      points: [],
+    },
+    {
+      title: '+2 Science',
+      class: 'Higher Secondary',
+      institute: 'Bauri Bandhu Higher Secondary School',
+      duration: '03/2013',
+      points: [],
     },
   ];
 
   return (
-    <div className="bg-white p-8 w-full md:w-[1280px] mx-auto">
-      <h2 className="text-2xl font-bold mb-4 text-center">Education</h2>
+    <div className="bg-white p-8 rounded-lg w-full md:w-[800px] mx-auto shadow-lg">
+      <h2 className="text-2xl font-bold mb-6 text-center text-cyan-800">Education</h2>
 
-      <ul className="list-none my-10">
+      <ul className="space-y-6">
         {education.map((edu, index) => (
-          <li key={index} className={`mb-4 ${showEducation ? 'opacity-100' : 'opacity-0'} shadow-md`}>
-            <div className="flex items-start h-full">
-              <div className="w-36 mr-4 bg-cyan-800 text-white flex flex-col justify-center items-center h-48 p-4">
-                <p className="text-white">{edu.duration}</p>
-                <h3 className='text-xl font-semibold text-center'>{edu.class}</h3>
-              </div>
-              <div className='p-4'>
-                <h3 className="text-lg font-bold">{edu.title}</h3>
-                <p className="text-gray-800">{edu.institute}</p>
-                <ul className="list-disc pl-6 mt-2">
+          <li
+            key={index}
+            className={`transition-opacity duration-500 ${
+              showEducation ? 'opacity-100' : 'opacity-0'
+            } flex bg-gray-100 shadow-md rounded-lg overflow-hidden`}
+          >
+            {/* Left Section for Date & Class */}
+            <div className="w-36 bg-cyan-700 text-white flex flex-col items-center justify-center p-4">
+              <p className="text-sm font-semibold">{edu.duration}</p>
+              <p className="text-base font-bold mt-2 text-center">{edu.class}</p>
+            </div>
+
+            {/* Right Section for Details */}
+            <div className="flex-1 p-4">
+              <h3 className="text-lg font-bold text-cyan-800">{edu.title}</h3>
+              <p className="text-sm text-gray-700 mt-1">{edu.institute}</p>
+              {edu.points.length > 0 && (
+                <ul className="list-disc pl-6 mt-2 text-sm text-gray-700">
                   {edu.points.map((point, i) => (
-                    <li key={i} className="text-gray-800">{point}</li>
+                    <li key={i}>{point}</li>
                   ))}
                 </ul>
-              </div>
+              )}
             </div>
           </li>
         ))}
