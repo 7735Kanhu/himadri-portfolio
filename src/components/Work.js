@@ -56,6 +56,11 @@ function WorkExperience() {
           <p className="text-gray-700">React Native Mobile Application</p>
           <p className="text-gray-600">Designed a mobile application to optimize logistics operations and tracking.</p>
         </li>
+        <li>
+          <h3 className="text-xl font-bold text-gray-800">Inventory Management System</h3>
+          <p className="text-gray-700">React Js web application</p>
+          <p className="text-gray-600">Designed a web application to optimize Inventory operations and Products.</p>
+        </li>
 
         <li>
           <h3 className="text-xl font-bold text-gray-800">P2 Civil Material Supplier</h3>

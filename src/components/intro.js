@@ -2,7 +2,15 @@ import React from 'react';
 import BG from './../assets/intro4.jpg';
 import profile from './../assets/kanhu.jpeg';
 
-const ProfilePage = ({ cvUrl }) => {
+const ProfilePage = ({ cvUrl='./Kanhu_Charan_2.4.pdf' }) => {
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = cvUrl; // URL of the PDF
+        link.download = 'Kanhu_Charan_CV.pdf'; // Name of the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
     return (
         <div className="profile-page">
             <div className="wrapper">
@@ -29,7 +37,7 @@ const ProfilePage = ({ cvUrl }) => {
                                 <a className="mt-2 mr-2 bg-cyan-600 p-2 px-4 cursor-pointer text-white" href="#contact" data-aos="zoom-in">
                                     Hire Me
                                 </a>
-                                <a className="mt-2 bg-cyan-600 p-2 px-4 cursor-pointer text-white" href={cvUrl} target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+                                <a className="mt-2 bg-cyan-600 p-2 px-4 cursor-pointer text-white" onClick={handleDownload} rel="noopener noreferrer" data-aos="zoom-in">
                                     Download CV
                                 </a>
                             </div>
